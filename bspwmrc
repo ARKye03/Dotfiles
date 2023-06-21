@@ -88,7 +88,7 @@ for i in ${code[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
 
 ## 5 > office and docs (always open office/doc apps on workspace-5)
-declare -a office=(ONLYOFFICE-DesktopEditors Atril Evince \
+declare -a office=(Atril Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
@@ -114,7 +114,7 @@ for i in ${settings[@]}; do
    bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 
 ## Always Floating Apps
-declare -a floating=(alacritty-float Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
+declare -a floating=(Mailspring xdman-Main alacritty-float Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
 Viewnior feh Nm-connection-editor)
 for i in ${floating[@]}; do
    bspc rule -a $i state=floating follow=on focus=on; done
@@ -162,6 +162,5 @@ bspfloat &
 
 # Launch Plank
 #bspc rule -a Plank layer=above border=off
-bspc rule -a steam desktop='^7' state=floating follow=no manage=on
-bspc rule -a Steam desktop='^7' state=floating follow=no manage=on
+
 exec plank &
